@@ -13,16 +13,20 @@ export class IncrementButton extends Component {
 
   handleClickDown = () => {
     if (this.state.clicks > 0) this.setState({ clicks: this.state.clicks - 1 });
-    this.setState({ show: false });
+    this.disabledToggle();
+  };
+  disabledToggle = () => {
+    if (this.state.clicks === 0) this.setState({ show: false });
   };
 
   render() {
     return (
       <div>
-        <Button content="Click up" onClick={this.handleClickUp} />
+        <Button id="up" content="Next Name " onClick={this.handleClickUp} />
         <Button
+          id="down"
           disabled={!this.state.show}
-          content="Click down"
+          content="Previous Name"
           onClick={this.handleClickDown}
         />
         <div id="clicks">{this.state.clicks}</div>
