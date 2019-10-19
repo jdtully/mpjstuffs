@@ -1,24 +1,13 @@
 import React, { Component } from "react";
 import { Button } from "semantic-ui-react";
+import {IncrementButton} from "./Selector"
 
-export class IncrementButton extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { clicks: 0, disabled: true };
-  }
-  handleClickUp = () => {
-    this.setState({ clicks: this.state.clicks + 1, disabled: false });
-  };
+export  default  class ShowButton extends Component {
+  Constructor(props){  
+    super(props){}
+  {clicks,disabled}  IncrementButton}
 
-  handleClickDown = () => {
-    if (this.state.clicks > 0)
-      this.setState({
-        clicks: this.state.clicks - 1,
-        disabled: this.state.clicks - 1 > 0 ? false : true
-      });
-  };
-
-  render() {
+    render() {
     return (
       <div>
         <Button content="Next Name " onClick={this.handleClickUp} />

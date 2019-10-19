@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export class IncrementButton extends Component {
+export default class IncrementButton extends Component {
   constructor(props) {
     super(props);
     this.state = { clicks: 0, disabled: true };
