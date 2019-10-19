@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Button } from "semantic-ui-react";
+import { Component } from "react";
 
 export class IncrementButton extends Component {
   constructor(props) {
@@ -17,18 +16,4 @@ export class IncrementButton extends Component {
         disabled: this.state.clicks - 1 > 0 ? false : true
       });
   };
-
-  render() {
-    return (
-      <div>
-        <Button content="Next Name " onClick={this.handleClickUp} />
-        <Button
-          disabled={this.state.disabled}
-          content="Previous Name"
-          onClick={this.handleClickDown}
-        />
-        <div>{this.state.clicks}</div>
-      </div>
-    );
-  }
 }
